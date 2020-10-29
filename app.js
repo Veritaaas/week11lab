@@ -21,7 +21,6 @@ let pollObj = {
 app.use("/", express.static(path.join(__dirname, "dist/chart")));
 io.on("connection", socket => {
     console.log("new connection made from client with ID="+socket.id);
-    //emit the pollObj to the new client 
     io.sockets.emit('newClinet',pollObj);
     socket.on("newVote", data => {
       io.sockets.emit("vote", addVote(data.vote));
@@ -42,5 +41,5 @@ for(let i in newPoll.options){
     }
 return newPoll;
     
-  }
+}
   

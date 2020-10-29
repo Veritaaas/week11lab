@@ -25,6 +25,20 @@ export class AppComponent {
   public pieChartType: ChartType = 'pie';
   public pieChartLegend = true;
   public pieChartPlugins = [];
+  colors: any[] = [{ 
+    backgroundColor: [
+      'lightblue',
+      'red',
+      'green',
+      'violet',
+      'yellow',
+      'cyan',
+      'lightgray',
+      'slateblue',
+      'violet',
+      'gray'
+    ]
+  }];
 
 
   constructor() {
